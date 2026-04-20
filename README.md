@@ -1,5 +1,5 @@
 # cse210-student-template
-This is the starter code for students in CSE 210.
+This repository is used by Daniel Checketts for CSE 210 at Brigham Young University-Idaho.
 
 This repository contains the starter code for many different projects. They are arranged as follows:
 
