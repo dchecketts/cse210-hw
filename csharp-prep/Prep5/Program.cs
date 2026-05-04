@@ -37,7 +37,7 @@ class Program
         int currentYear = DateTime.Now.Year;
         int ageThisYear = currentYear - birthYear;
         
-        Console.WriteLine($"{userName}, the square of your number is {squaredNumber}. \n {userName}, you will be {ageThisYear} years old this year.");
+        Console.WriteLine($"{userName}, the square of your number is {squaredNumber}. \n{userName}, you will be {ageThisYear} years old this year.");
     }
     
     static void Main(string[] args)
