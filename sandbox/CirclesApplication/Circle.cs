@@ -1,6 +1,6 @@
 class Circle
 {
-    private double _radius;
+    public double _radius;
 
     public void SetRadius(double radius)
     {
@@ -10,5 +10,15 @@ class Circle
     public double GetArea()
     {
         return Math.PI * _radius * _radius;
+    }
+
+    public double GetCircumfrence()
+    {
+        return 2 * Math.PI * _radius;
+    }
+
+    public double GetDiameter()
+    {
+        return _radius * 2;
     }
 }
