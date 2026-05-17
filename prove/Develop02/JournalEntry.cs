@@ -2,9 +2,9 @@ namespace Develop02;
 
 public class JournalEntry
 {
-    private string _date;
-    private string _prompt;
-    private string _response;
+    public string _date;
+    public string _prompt;
+    public string _response;
 
     // TODO: Add more prompts
     private string[] _prompts =
@@ -30,6 +30,6 @@ public class JournalEntry
 
     public string CreateFileSystemString()
     {
-        return $"{_date},{_prompt},{_response}";
+        return $"{_date}|{_prompt}|{_response}";
     }
 }
