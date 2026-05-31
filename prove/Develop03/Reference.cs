@@ -2,15 +2,35 @@ namespace Develop03;
 
 public class Reference
 {
-    private string _reference;
+    private string _book;
+    private int _chapter;
+    private int _startVerse;
+    private int _endVerse;
 
-    public void SetReference(string reference)
+    public Reference(string book, int chapter, int startVerse)
     {
-        _reference = reference;
+        _book = book;
+        _chapter = chapter;
+        _startVerse = startVerse;
+    }
+
+    public Reference(string book, int chapter, int startVerse, int endVerse)
+    {
+        _book = book;
+        _chapter = chapter;
+        _startVerse = startVerse;
+        _endVerse = endVerse;
     }
     
-    public void DisplayReference()
+    public string DisplayReference()
     {
-        Console.WriteLine(_reference);
+        if (_endVerse != 0)
+        {
+            return $"{_book} {_chapter}:{_startVerse}-{_endVerse}";
+        }
+        else
+        {
+            return $"{_book} {_chapter}:{_startVerse}";
+        }
     }
 }

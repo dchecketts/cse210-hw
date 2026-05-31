@@ -5,17 +5,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        Word myWord = new Word("Hello");
-        Console.WriteLine(myWord.GetWord());
         
-        myWord.Hide();
-        Console.WriteLine(myWord.GetWord());
-        
-        myWord.DisplayWord();
-        
-        if (myWord.IsHidden())
-        {
-            Console.WriteLine(myWord.GetWord());
-        }
+        Scripture myScripture = new Scripture("Genesis", 1, 1, 2,
+            "1 In the beginning God created the heaven and the earth. 2 And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters.");
     }
 }

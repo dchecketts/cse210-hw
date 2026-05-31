@@ -19,7 +19,10 @@ public class Word
         {
             foreach (char c in _word)
             {
-                tempWord = tempWord.Replace(c, '_');
+                if (char.IsLetter(c))
+                {
+                    tempWord = tempWord.Replace(c, '_');
+                }
             }
         }
         return tempWord;
@@ -36,7 +39,7 @@ public class Word
 
     public void DisplayWord()
     {
-        Console.WriteLine(GetWord());
+        Console.Write($"{GetWord()} ");
     }
     
 }
