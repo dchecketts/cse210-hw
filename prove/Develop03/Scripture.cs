@@ -17,9 +17,9 @@ public class Scripture
         ConvertToList(reference);
     }
 
-    private List<Word> ConvertToList(string reference)
+    private void ConvertToList(string reference)
     {
-        return _words = reference.Split(' ').Select(w => new Word(w)).ToList();
+        _words = reference.Split(' ').Select(w => new Word(w)).ToList();
     }
 
     public void ProcessVerse()
@@ -27,7 +27,10 @@ public class Scripture
         Random random = Random.Shared;
 
         int unhiddenWords = _words.Count(w => !w.IsHidden());
+        
+        // To change the minimum words to hide, change the variable immediately below.
         int wordsToHide = Math.Min(3, unhiddenWords);
+        
         int hiddenWords = 0;
 
         while (hiddenWords < wordsToHide)
@@ -43,8 +46,14 @@ public class Scripture
         }
     }
 
+    public bool AreAllWordsHidden()
+    {
+        return _words.All(w => w.IsHidden());
+    }
+
     public void DisplayVerse()
     {
+        Console.WriteLine(_reference.DisplayReference());
         foreach (Word w in _words)
         {
             w.DisplayWord();

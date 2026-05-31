@@ -19,6 +19,7 @@ public class Word
         {
             foreach (char c in _word)
             {
+                // This if statement will only hide characters if they are not punctuation or numbers, to improve readability and assist with memorization.
                 if (char.IsLetter(c))
                 {
                     tempWord = tempWord.Replace(c, '_');
