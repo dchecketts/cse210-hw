@@ -27,22 +27,23 @@ class Sandbox
         //     age2 = int.Parse(Console.ReadLine());
         // } while (age2 < 0 || age2 > 125);
         
-        Console.Write("Enter your height in inches: ");
-        string userHeight = Console.ReadLine();
-
-        int height = int.Parse(userHeight);
-
-        if (height < 48)
-        {
-            Console.Write("Sorry, you are too short.");
-        }
-        else if (height > 78)
-        {
-            Console.Write("Sorry, you are too tall.");
-        }
-        else if (height > 48 && height < 78)
-        {
-            Console.Write("Enjoy your ride!");
-        }
+        // Console.Write("Enter your height in inches: ");
+        // string userHeight = Console.ReadLine();
+        //
+        // int height = int.Parse(userHeight);
+        //
+        // if (height < 48)
+        // {
+        //     Console.Write("Sorry, you are too short.");
+        // }
+        // else if (height > 78)
+        // {
+        //     Console.Write("Sorry, you are too tall.");
+        // }
+        // else if (height > 48 && height < 78)
+        // {
+        //     Console.Write("Enjoy your ride!");
+        // }
+        
     }
 }
