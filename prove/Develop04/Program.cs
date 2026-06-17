@@ -1,9 +1,10 @@
 using System;
+using Develop04;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop04 World!");
+        var myActivity = new Activity("My Activity", "A short activity");
     }
 }
