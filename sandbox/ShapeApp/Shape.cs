@@ -1,0 +1,20 @@
+namespace ShapeApp;
+
+public class Shape(string color)
+{
+    private string _color = color;
+
+    public string GetColor()
+    {
+        return _color;
+    }
+    public void SetColor(string color)
+    {
+        _color = color;
+    }
+
+    public virtual double GetArea()
+    {
+        return 0;
+    }
+}

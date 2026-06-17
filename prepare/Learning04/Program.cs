@@ -5,8 +5,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Assignment myAssignment = new Assignment("Samuel Bennett", "Math");
-        // Console.WriteLine(myAssignment.GetSummary());
+        Assignment myAssignment = new Assignment("Samuel Bennett", "Math");
+        Console.WriteLine(myAssignment.GetSummary());
         
         MathAssignment myMathAssignment = new MathAssignment("Roberto Rodriguez", "Fractions", "Section 7.3", "Problems 8-19");
         Console.WriteLine(myMathAssignment.GetSummary());

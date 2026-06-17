@@ -19,4 +19,9 @@ public class Person
     {
         return $"{_firstName} {_lastName}, age: {_age}, weight: {_weight}";
     }
+
+    public void ChangeWeight(int update)
+    {
+        _weight += update;
+    }
 }
