@@ -2,7 +2,7 @@ namespace Develop04;
 
 public class BreathActivity(string activityName, string activityDescription) : Activity(activityName, activityDescription)
 {
-    public void Run()
+    public override void Run()
     {
         DisplayDescription();
         

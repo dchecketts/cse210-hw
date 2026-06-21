@@ -1,6 +1,6 @@
 namespace Develop04;
 
-public class Activity(string activityName, string activityDescription)
+public abstract class Activity(string activityName, string activityDescription)
 {
     protected string _activtyName = activityName;
     protected string _activityDescription = activityDescription;
@@ -56,4 +56,6 @@ public class Activity(string activityName, string activityDescription)
             Console.Write("\b");
         }
     }
+
+    public abstract void Run();
 }

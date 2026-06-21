@@ -11,7 +11,7 @@ public class ListActivity(string activityName, string activityDescription) : Act
             "Who are some of your personal heroes?"
         ];
 
-    public void Run()
+    public override void Run()
     {
         DisplayDescription();
         

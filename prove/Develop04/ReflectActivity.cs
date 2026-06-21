@@ -23,7 +23,7 @@ public class ReflectActivity(string activityName, string activityDescription) : 
             "How can you keep this experience in mind in the future?"
         ];
 
-    public void Run()
+    public override void Run()
     {
         DisplayDescription();
         
