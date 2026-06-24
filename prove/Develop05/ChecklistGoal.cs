@@ -1,11 +1,11 @@
 namespace Develop05;
 
-public class ChecklistGoal(string goalName, string goalDescription, int repeatPoints, int bonusPoints, int maxRepetitions, int currentRepetitions = 0) : Goal(goalName, goalDescription, repeatPoints)
+public class ChecklistGoal(string name, string description, int repeatPoints, int bonusPoints, int maxRepetitions, int currentRepetitions = 0) : Goal(name, description, repeatPoints)
 {
-    private int _maxRepetitions = maxRepetitions;
+    private readonly int _maxRepetitions = maxRepetitions;
     private int _currentRepetitions = currentRepetitions;
-    private int _repeatPoints = repeatPoints;
-    private int _bonusPoints = bonusPoints;
+    private readonly int _repeatPoints = repeatPoints;
+    private readonly int _bonusPoints = bonusPoints;
     
     public override int RecordEvent()
     {
@@ -20,7 +20,7 @@ public class ChecklistGoal(string goalName, string goalDescription, int repeatPo
         return points;
     }
     
-    public override bool IsComplete()
+    protected override bool IsComplete()
     {
         if (_currentRepetitions >= _maxRepetitions)
         {
@@ -37,6 +37,6 @@ public class ChecklistGoal(string goalName, string goalDescription, int repeatPo
     public override string GetFullGoalDetails()
     {
         // Checklist Goal: Goal Name, Goal Description, Repetition Points, Bonus Points, Max Repetitions, Current Repetitions
-        return $"ChecklistGoal:{GoalName},{GoalDescription},{_repeatPoints},{_bonusPoints},{_maxRepetitions},{_currentRepetitions}";
+        return $"ChecklistGoal:{GoalName},{Description},{_repeatPoints},{_bonusPoints},{_maxRepetitions},{_currentRepetitions}";
     }
 }

@@ -1,10 +1,10 @@
 namespace Develop05;
 
-public abstract class Goal(string name, string goalDescription, int goalPoints)
+public abstract class Goal(string name, string description, int points)
 { 
-    protected string GoalName = name; 
-    protected string GoalDescription = goalDescription; 
-    protected int GoalPoints = goalPoints;
+    protected readonly string GoalName = name; 
+    protected readonly string Description = description; 
+    protected readonly int Points = points;
 
     public string GetGoalName()
     {
@@ -12,11 +12,11 @@ public abstract class Goal(string name, string goalDescription, int goalPoints)
     }
 
     public abstract int RecordEvent(); 
-    public abstract bool IsComplete(); 
+    protected abstract bool IsComplete(); 
 
     public virtual string GetGoalDetails() 
     { 
-        return $"[{(IsComplete() ? "X" : " ")}] {GoalName} ({GoalDescription})"; 
+        return $"[{(IsComplete() ? "X" : " ")}] {GoalName} ({Description})"; 
     } 
 
     public abstract string GetFullGoalDetails();

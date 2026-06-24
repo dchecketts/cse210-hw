@@ -1,6 +1,6 @@
 namespace Develop05;
 
-public class SimpleGoal(string goalName, string goalDescription, int goalPoints, bool isComplete = false) : Goal(goalName, goalDescription, goalPoints)
+public class SimpleGoal(string name, string description, int points, bool isComplete = false) : Goal(name, description, points)
 {
     private bool _isComplete = isComplete;
 
@@ -13,12 +13,12 @@ public class SimpleGoal(string goalName, string goalDescription, int goalPoints,
         else
         {
             _isComplete = true;
-            return goalPoints;
+            return Points;
         }
 
     }
 
-    public override bool IsComplete()
+    protected override bool IsComplete()
     {
         return _isComplete;
     }
@@ -26,6 +26,6 @@ public class SimpleGoal(string goalName, string goalDescription, int goalPoints,
     public override string GetFullGoalDetails()
     {
         // Simple Goal: Goal Name, Goal Description, Points, Completed
-        return $"SimpleGoal:{GoalName},{GoalDescription},{GoalPoints},{_isComplete}";
+        return $"SimpleGoal:{GoalName},{Description},{Points},{_isComplete}";
     }
 }
